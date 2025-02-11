@@ -14,6 +14,9 @@ RUN dotnet publish -c Release -o /app/out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
+# Install OpenSSL
+RUN apt-get update && apt-get install -y openssl
+
 # Copy the build output
 COPY --from=build /app/out .
 

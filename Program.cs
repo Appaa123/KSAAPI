@@ -1,9 +1,12 @@
+using System.Net;
 using KSAApi.Services;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
-
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+ServicePointManager.ServerCertificateValidationCallback +=
+    (sender, cert, chain, sslPolicyErrors) => true;
 // Add services to the container.
 builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
