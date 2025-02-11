@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copy the project file and restore dependencies
-COPY ["KSAAPI.csproj", "./"]
+COPY ["KSAApi.csproj", "./"]
 RUN dotnet restore
 
 # Copy everything else and build the project
@@ -19,4 +19,4 @@ COPY --from=build /app/out .
 
 # Expose port 8080 for Render
 EXPOSE 8080
-CMD ["dotnet", "KSAAPI.dll"]
+CMD ["dotnet", "KSAApi.dll"]
