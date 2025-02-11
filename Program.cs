@@ -4,10 +4,6 @@ using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(8080); // Render runs on port 8080
-});
 // Add services to the container.
 builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
