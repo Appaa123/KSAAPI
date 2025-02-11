@@ -8,11 +8,6 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8080); // Render runs on port 8080
 });
-// Trust forwarded headers (important for HTTPS behind a proxy)
-builder.Services.Configure<ForwardedHeadersOptions>(options =>
-{
-    options.ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.All;
-});
 // Add services to the container.
 builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
@@ -39,7 +34,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

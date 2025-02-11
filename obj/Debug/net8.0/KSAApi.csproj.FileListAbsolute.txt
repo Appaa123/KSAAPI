@@ -234,3 +234,8 @@ E:\KSA\KSAAPI\bin\Debug\net8.0\out\appsettings.Development.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\appsettings.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\KSAApi.deps.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\KSAApi.runtimeconfig.json
+E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\web.config
+E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\appsettings.Development.json
+E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\appsettings.json
+E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\KSAApi.deps.json
+E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\KSAApi.runtimeconfig.json
