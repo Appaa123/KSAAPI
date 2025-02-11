@@ -1,6 +1,11 @@
 E:\KSA\KSAAPI\out\KSAApi.exe
+E:\KSA\KSAAPI\out\out\web.config
 E:\KSA\KSAAPI\out\appsettings.Development.json
 E:\KSA\KSAAPI\out\appsettings.json
+E:\KSA\KSAAPI\out\out\appsettings.Development.json
+E:\KSA\KSAAPI\out\out\appsettings.json
+E:\KSA\KSAAPI\out\out\KSAApi.deps.json
+E:\KSA\KSAAPI\out\out\KSAApi.runtimeconfig.json
 E:\KSA\KSAAPI\out\KSAApi.dll
 E:\KSA\KSAAPI\out\KSAApi.deps.json
 E:\KSA\KSAAPI\out\KSAApi.runtimeconfig.json

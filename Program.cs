@@ -4,6 +4,15 @@ using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080); // Render runs on port 8080
+});
+// Trust forwarded headers (important for HTTPS behind a proxy)
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.All;
+});
 // Add services to the container.
 builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
@@ -22,7 +31,7 @@ builder.Services.AddSingleton<FarmStockRepository>();
 
 
 var app = builder.Build();
-
+app.UseForwardedHeaders(); // Ensures proper HTTPS handling
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

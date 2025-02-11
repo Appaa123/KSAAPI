@@ -229,3 +229,8 @@ E:\KSA\KSAAPI\obj\Release\net8.0\refint\KSAApi.dll
 E:\KSA\KSAAPI\obj\Release\net8.0\KSAApi.pdb
 E:\KSA\KSAAPI\obj\Release\net8.0\KSAApi.genruntimeconfig.cache
 E:\KSA\KSAAPI\obj\Release\net8.0\ref\KSAApi.dll
+E:\KSA\KSAAPI\bin\Release\net8.0\out\web.config
+E:\KSA\KSAAPI\bin\Release\net8.0\out\appsettings.Development.json
+E:\KSA\KSAAPI\bin\Release\net8.0\out\appsettings.json
+E:\KSA\KSAAPI\bin\Release\net8.0\out\KSAApi.deps.json
+E:\KSA\KSAAPI\bin\Release\net8.0\out\KSAApi.runtimeconfig.json

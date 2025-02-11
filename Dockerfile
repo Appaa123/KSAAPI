@@ -17,6 +17,9 @@ WORKDIR /app
 # Copy the build output
 COPY --from=build /app/out .
 
+# Set environment variables for Render
+ENV ASPNETCORE_URLS=http://+:8080
+
 # Expose port 8080 for Render
 EXPOSE 8080
 CMD ["dotnet", "KSAApi.dll"]
