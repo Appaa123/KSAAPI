@@ -1,0 +1,6 @@
+@KSAApi_HostAddress = http://localhost:5155
+
+GET {{KSAApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
