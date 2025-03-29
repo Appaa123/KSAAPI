@@ -33,6 +33,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(policy =>
+    policy.AllowAnyOrigin() // Allows requests from any domain
+          .AllowAnyMethod() // Allows GET, POST, PUT, DELETE, etc.
+          .AllowAnyHeader()); // Allows all headers
 //app.UseHttpsRedirection();
 
 app.UseAuthorization();
