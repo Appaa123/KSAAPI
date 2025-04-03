@@ -39,11 +39,10 @@ namespace KSAApi.Controllers
 
          public IActionResult DeleteFarmStock(string Id){
             var stock = farmStockList.FirstOrDefault(s => s.Id == Id);
-            if (stock == null)
-            {
-                return NotFound();
-            }
-            
+            // if (stock == null)
+            // {
+            //     return NotFound();
+            // }            
             try{
             _ksaService.DeleteFarmStockAsync(Id);
             }
