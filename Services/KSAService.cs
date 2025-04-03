@@ -33,4 +33,12 @@ public async Task AddFarmStockAsync(FarmStock farmStock){
     await _farmStockRepository.CreateAsync(farmStock);
 } 
 
+public async Task UpdateFarmStockAsync(string Id, FarmStock farmStock){
+    await _farmStockRepository.UpdateAsync(Id, farmStock);
+} 
+
+public async Task DeleteFarmStockAsync(string Id){
+    await _farmStockRepository.DeleteAsync(Id);
+} 
+
 }
