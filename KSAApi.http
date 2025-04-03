@@ -1,4 +1,4 @@
-@KSAApi_HostAddress = http://localhost:5155
+@KSAApi_HostAddress = https://ksaapi.onrender.com
 
 GET {{KSAApi_HostAddress}}/weatherforecast/
 Accept: application/json

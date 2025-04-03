@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\KSA\\KSAAPI\\KSAApi.csproj": {}
+    "E:\\KSA\\KSAApi\\KSAApi.csproj": {}
   },
   "projects": {
-    "E:\\KSA\\KSAAPI\\KSAApi.csproj": {
+    "E:\\KSA\\KSAApi\\KSAApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KSA\\KSAAPI\\KSAApi.csproj",
+        "projectUniqueName": "E:\\KSA\\KSAApi\\KSAApi.csproj",
         "projectName": "KSAApi",
-        "projectPath": "E:\\KSA\\KSAAPI\\KSAApi.csproj",
+        "projectPath": "E:\\KSA\\KSAApi\\KSAApi.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "E:\\KSA\\KSAAPI\\obj\\",
+        "outputPath": "E:\\KSA\\KSAApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"

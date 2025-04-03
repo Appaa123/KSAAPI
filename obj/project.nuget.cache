@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IO0sa/YJuQ4=",
+  "dgSpecHash": "4EbgKGzATT8=",
   "success": true,
-  "projectFilePath": "E:\\KSA\\KSAAPI\\KSAApi.csproj",
+  "projectFilePath": "E:\\KSA\\KSAApi\\KSAApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
