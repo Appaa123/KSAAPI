@@ -7,7 +7,7 @@ namespace KSAApi.Controllers
 {
 
     [Route("api/[controller]")]
-    [Authorize(Policy ="AdminsOnly")]
+    [Authorize]
     [ApiController]
     public class FarmStockController : ControllerBase
     {
