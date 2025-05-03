@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "4EbgKGzATT8=",
-  "success": true,
+  "dgSpecHash": "R6wL9EivfkA=",
+  "success": false,
   "projectFilePath": "E:\\KSA\\KSAApi\\KSAApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\aspnetcore.identity.mongo\\10.1.0\\aspnetcore.identity.mongo.10.1.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\duende.identitymodel\\7.0.0\\duende.identitymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\duende.identityserver\\7.2.2\\duende.identityserver.7.2.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\duende.identityserver.aspnetidentity\\7.2.2\\duende.identityserver.aspnetidentity.7.2.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\duende.identityserver.storage\\7.2.2\\duende.identityserver.storage.7.2.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -55,6 +60,11 @@
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.10\\microsoft.aspnetcore.authentication.openidconnect.8.0.10.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.13\\microsoft.aspnetcore.cryptography.internal.8.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.13\\microsoft.aspnetcore.cryptography.keyderivation.8.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\8.0.10\\microsoft.aspnetcore.dataprotection.abstractions.8.0.10.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.build\\17.10.4\\microsoft.build.17.10.4.nupkg.sha512",
@@ -73,10 +83,22 @@
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.diasymreader\\2.0.0\\microsoft.diasymreader.2.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\9.0.0\\microsoft.dotnet.scaffolding.shared.9.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0-rc.2.24473.5\\microsoft.extensions.dependencyinjection.9.0.0-rc.2.24473.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0-rc.2.24473.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.0-rc.2.24473.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.0-rc.2.24473.5\\microsoft.extensions.dependencymodel.9.0.0-rc.2.24473.5.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.13\\microsoft.extensions.identity.core.8.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.13\\microsoft.extensions.identity.stores.8.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.logging\\8.0.1\\microsoft.extensions.logging.8.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.1.2\\microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.logging\\7.1.2\\microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.protocols\\7.1.2\\microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.net.stringtools\\17.10.4\\microsoft.net.stringtools.17.10.4.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
@@ -120,6 +142,7 @@
     "C:\\Users\\HP\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.formats.asn1\\9.0.0-rc.2.24473.5\\system.formats.asn1.9.0.0-rc.2.24473.5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.io.pipelines\\9.0.0-rc.2.24473.5\\system.io.pipelines.9.0.0-rc.2.24473.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512",
@@ -135,5 +158,15 @@
     "C:\\Users\\HP\\.nuget\\packages\\system.threading.tasks.dataflow\\8.0.0\\system.threading.tasks.dataflow.8.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: MongoDB.Driver from 3.2.1 to 3.1.0. Reference the package directly from the project to select a different version. \r\n KSAApi -> AspNetCore.Identity.Mongo 10.1.0 -> MongoDB.Driver (>= 3.2.1) \r\n KSAApi -> MongoDB.Driver (>= 3.1.0)",
+      "libraryId": "MongoDB.Driver",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

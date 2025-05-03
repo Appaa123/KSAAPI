@@ -254,3 +254,11 @@ E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\out\out\out\appsettings.Development.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\out\out\out\appsettings.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\out\out\out\KSAApi.deps.json
 E:\KSA\KSAAPI\bin\Debug\net8.0\out\out\out\out\out\KSAApi.runtimeconfig.json
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\KSA\KSAApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

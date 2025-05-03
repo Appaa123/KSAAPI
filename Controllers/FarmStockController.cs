@@ -1,4 +1,5 @@
 using KSAApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +7,7 @@ namespace KSAApi.Controllers
 {
 
     [Route("api/[controller]")]
+    [Authorize(Policy ="AdminsOnly")]
     [ApiController]
     public class FarmStockController : ControllerBase
     {
@@ -18,6 +20,7 @@ namespace KSAApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
 
         public async Task<List<FarmStock>> GetCowStock(){
             return await _ksaService.GetFarmStockAsync();

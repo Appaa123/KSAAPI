@@ -43,6 +43,22 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AspNetCore.Identity.Mongo": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[7.2.2, )"
+            },
+            "Duende.IdentityServer.AspNetIdentity": {
+              "target": "Package",
+              "version": "[7.2.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
