@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DZpA5V6dYtY=",
+  "dgSpecHash": "EKpqtTPdwVU=",
   "success": true,
   "projectFilePath": "E:\\KSA\\KSAApi\\KSAApi.csproj",
   "expectedPackageFiles": [
@@ -110,8 +110,8 @@
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\9.0.0\\microsoft.visualstudio.web.codegeneration.utils.9.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\9.0.0\\microsoft.visualstudio.web.codegenerators.mvc.9.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\mongodb.bson\\3.2.1\\mongodb.bson.3.2.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\mongodb.driver\\3.2.1\\mongodb.driver.3.2.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\mongodb.bson\\3.4.0\\mongodb.bson.3.4.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\mongodb.driver\\3.4.0\\mongodb.driver.3.4.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
