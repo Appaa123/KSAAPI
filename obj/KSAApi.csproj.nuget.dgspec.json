@@ -45,7 +45,7 @@
           "dependencies": {
             "AspNetCore.Identity.Mongo": {
               "target": "Package",
-              "version": "[10.1.0, )"
+              "version": "[8.0.0, )"
             },
             "Duende.IdentityServer": {
               "target": "Package",
@@ -65,11 +65,7 @@
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[3.4.0, )"
-            },
-            "MongoDB.Driver.Core": {
-              "target": "Package",
-              "version": "[2.4.4, )"
+              "version": "[2.21.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
