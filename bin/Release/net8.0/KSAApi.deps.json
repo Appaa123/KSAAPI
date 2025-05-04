@@ -13,7 +13,7 @@
           "Duende.IdentityServer.AspNetIdentity": "7.2.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0",
-          "MongoDB.Driver": "3.2.1",
+          "MongoDB.Driver": "3.4.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
@@ -24,7 +24,7 @@
         "dependencies": {
           "Microsoft.Extensions.Identity.Core": "8.0.13",
           "Microsoft.Extensions.Identity.Stores": "8.0.13",
-          "MongoDB.Driver": "3.2.1"
+          "MongoDB.Driver": "3.4.0"
         },
         "runtime": {
           "lib/net8.0/AspNetCore.Identity.Mongo.dll": {
@@ -1560,23 +1560,23 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
-      "MongoDB.Bson/3.2.1": {
+      "MongoDB.Bson/3.4.0": {
         "dependencies": {
           "System.Memory": "4.5.5",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
           }
         }
       },
-      "MongoDB.Driver/3.2.1": {
+      "MongoDB.Driver/3.4.0": {
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-          "MongoDB.Bson": "3.2.1",
+          "MongoDB.Bson": "3.4.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -1584,8 +1584,8 @@
         },
         "runtime": {
           "lib/net6.0/MongoDB.Driver.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
           }
         }
       },
@@ -2701,19 +2701,19 @@
       "path": "microsoft.win32.registry/5.0.0",
       "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
     },
-    "MongoDB.Bson/3.2.1": {
+    "MongoDB.Bson/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-45w3BJU3sVejUaOVLAxQiEdWkNH+iyxMs3lDh4l2lUFbOb/s4uB++UoQY/3TCQrupQyx1/y7yzC5I76o4h7fFw==",
-      "path": "mongodb.bson/3.2.1",
-      "hashPath": "mongodb.bson.3.2.1.nupkg.sha512"
+      "sha512": "sha512-0fBbXqO/ADhWLcgq0cUNizcKEFAuz5klxUc5CWTWV8vdnlOl5QTeAI7Kh64bCoz654ZN7WWOjz9WRw0QGHcqQA==",
+      "path": "mongodb.bson/3.4.0",
+      "hashPath": "mongodb.bson.3.4.0.nupkg.sha512"
     },
-    "MongoDB.Driver/3.2.1": {
+    "MongoDB.Driver/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ynT4Mc0ilT+DSQBbobfORqCWqm5UdHIX3Nc59oQH3XbPi43jKiqf7SK8NLBmQsB6RJBJPR+WdIeNLtzyLj3U3g==",
-      "path": "mongodb.driver/3.2.1",
-      "hashPath": "mongodb.driver.3.2.1.nupkg.sha512"
+      "sha512": "sha512-+8vGdlbbzfPfQzCI00nPX59vH+5Nfumb2lyXf7xdIcAa05JPBdXFc/vWw0rPQOqIWYWfTmvQsxUgUXyzk0AKGw==",
+      "path": "mongodb.driver/3.4.0",
+      "hashPath": "mongodb.driver.3.4.0.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",
