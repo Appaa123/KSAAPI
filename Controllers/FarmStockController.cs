@@ -20,8 +20,6 @@ namespace KSAApi.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-
         public async Task<List<FarmStock>> GetCowStock(){
             return await _ksaService.GetFarmStockAsync();
         }
