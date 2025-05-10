@@ -12,6 +12,16 @@ builder.Configuration
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables();
+//Allow CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("https://appaa123.github.io")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 // ✅ Bind strongly-typed configuration (optional)
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ServicePointManager.ServerCertificateValidationCallback +=
@@ -84,7 +94,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowFrontend"); // 🔥 This must go early
 app.UseCors(policy =>
     policy.AllowAnyOrigin() // Allows requests from any domain
           .AllowAnyMethod() // Allows GET, POST, PUT, DELETE, etc.
