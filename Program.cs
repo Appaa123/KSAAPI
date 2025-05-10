@@ -8,6 +8,11 @@ using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+// ✅ Bind strongly-typed configuration (optional)
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ServicePointManager.ServerCertificateValidationCallback +=
     (sender, cert, chain, sslPolicyErrors) => true;
@@ -59,6 +64,7 @@ builder.Services.AddAuthorization(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<IMongoClient>(sp =>
@@ -87,6 +93,15 @@ app.UseCors(policy =>
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapGet("/config-check", (IConfiguration config) =>
+{
+    return Results.Ok(new {
+        JwtKey = config["Jwt:Key"],
+        Issuer = config["Jwt:Issuer"],
+        Mongo = config["MongoDB:ConnectionString"]
+    });
+});
 
 app.MapControllers();
 
