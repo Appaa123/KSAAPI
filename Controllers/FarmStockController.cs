@@ -1,11 +1,13 @@
 using KSAApi.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KSAApi.Controllers
 {
 
+    [EnableCors("AllowSpecificOrigin")]
     [Route("api/[controller]")]
     [Authorize]
     [ApiController]
