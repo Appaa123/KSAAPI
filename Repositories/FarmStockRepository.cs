@@ -11,8 +11,18 @@ public class FarmStockRepository
         _farmStock = database.GetCollection<FarmStock>("FarmStock");
     }
 
-    public async Task<List<FarmStock>> GetAllAsync() =>
-        await _farmStock.Find(org => true).ToListAsync();
+    public List<FarmStock> GetAllAsync()
+    {
+        try{
+        
+        return _farmStock.Find(org => true).ToList();
+    
+        }
+        catch (Exception ex){
+            Console.WriteLine("FarmStockRepository.GetAllAsync failed: " + ex.ToString());
+            throw; // Rethrow so it still returns 500
+        }
+    }
 
     public async Task<FarmStock> GetByIdAsync(string id) =>
         await _farmStock.Find(frm => frm.Id == id).FirstOrDefaultAsync();

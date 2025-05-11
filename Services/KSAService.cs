@@ -25,8 +25,8 @@ public CowStock getRandomCowStock() {
     return cowStock;
 }
 
-public async Task<List<FarmStock>> GetFarmStockAsync(){
-    return await _farmStockRepository.GetAllAsync();
+public List<FarmStock> GetFarmStockAsync(){
+    return _farmStockRepository.GetAllAsync();
 }
 
 public async Task AddFarmStockAsync(FarmStock farmStock){

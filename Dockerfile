@@ -1,25 +1,28 @@
-# Use official .NET SDK for building the app
+# Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
-
-# Copy the project file and restore dependencies
+WORKDIR /src
 COPY ["KSAApi.csproj", "./"]
 RUN dotnet restore
 
-# Copy everything else and build the project
-COPY . ./
-RUN dotnet publish -c Release -o /app/out
+COPY . .
+RUN dotnet publish -c Release -o /app/publish
 
-# Use a lightweight runtime image
+# Stage 2: Runtime with required system libs
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Install OpenSSL
-RUN apt-get update && apt-get install -y openssl
+# Install SRV resolution dependencies
+RUN apt-get update && apt-get install -y \
+    openssl \
+    libnss3 \
+    ca-certificates \
+    dnsutils \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy the build output
-COPY --from=build /app/out .
+COPY --from=build /app/publish .
 
-# Expose port 8080 for Render
+# For Render or other cloud deployment
 EXPOSE 8080
-CMD ["dotnet", "KSAApi.dll"]
+ENV ASPNETCORE_URLS=http://+:8080
+
+ENTRYPOINT ["dotnet", "KSAApi.dll"]
