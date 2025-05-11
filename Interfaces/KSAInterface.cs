@@ -6,5 +6,5 @@ public interface IKSAService{
     Task DeleteFarmStockAsync(string Id);
     Task UpdateFarmStockAsync(string Id, FarmStock farmStock);
     Task<List<FarmStock>> GetFarmStockAsync();
-    public Task<CowStock> getRandomCowStock();
+    public CowStock getRandomCowStock();
 }

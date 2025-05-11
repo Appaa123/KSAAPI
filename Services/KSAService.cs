@@ -14,7 +14,7 @@ public KSAServcie(FarmStockRepository farmStockRepository){
 }
 CowStock cowStock = new CowStock();
 
-public async Task<CowStock> getRandomCowStock() {
+public CowStock getRandomCowStock() {
 
     cowStock.Date = new DateOnly();
     cowStock.Type = "Dry Grass";
