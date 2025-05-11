@@ -79,7 +79,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseStaticFiles();
 app.UseRouting();
 app.UseCors("AllowFrontend"); // 🔥 This must go early
 
@@ -96,5 +96,4 @@ app.MapGet("/config-check", (IConfiguration config) =>
 });
 
 app.MapControllers();
-
 app.Run();
