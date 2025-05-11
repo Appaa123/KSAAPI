@@ -72,7 +72,6 @@ builder.Services.AddSingleton<FarmStockRepository>();
 
 
 var app = builder.Build();
-app.UseCors("AllowFrontend"); // 🔥 This must go early
 app.UseForwardedHeaders(); // Ensures proper HTTPS handling
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -80,11 +79,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-// app.UseCors(policy =>
-//     policy.AllowAnyOrigin() // Allows requests from any domain
-//           .AllowAnyMethod() // Allows GET, POST, PUT, DELETE, etc.
-//           .AllowAnyHeader()); // Allows all headers
-//app.UseHttpsRedirection();
+app.Use(async (context, next) =>
+{
+    if (context.Request.Method == HttpMethods.Options)
+    {
+        context.Response.StatusCode = StatusCodes.Status200OK;
+        await context.Response.CompleteAsync();
+        return;
+    }
+
+    await next();
+});
+app.UseRouting();
+app.UseCors("AllowFrontend"); // 🔥 This must go early
 
 app.UseAuthentication();
 app.UseAuthorization();

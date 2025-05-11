@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace KSAApi.Controllers
 {
 
-    [EnableCors("AllowSpecificOrigin")]
     [Route("api/[controller]")]
     [Authorize]
     [ApiController]
@@ -28,12 +27,12 @@ namespace KSAApi.Controllers
 
         [HttpPut]
 
-        public IActionResult UpdateFarmStock(string Id, [FromBody] FarmStock farmStock){
+        public async Task<IActionResult> UpdateFarmStock(string Id, [FromBody] FarmStock farmStock){
             if (farmStock == null)
             {
                   return BadRequest("Invalid data.");
             }
-            _ksaService.UpdateFarmStockAsync(Id, farmStock);
+            await _ksaService.UpdateFarmStockAsync(Id, farmStock);
             farmStockList.Add(farmStock);
             return CreatedAtAction(nameof(GetStockById), new { id = farmStock.Id }, farmStock);
         }
