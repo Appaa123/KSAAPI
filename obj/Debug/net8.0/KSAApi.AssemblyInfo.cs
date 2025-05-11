@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KSAApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74bdb7e85a4564b2937cc48ae70860ff2019a23c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+819dc74a42fead442553c29d707976548dc2c291")]
 [assembly: System.Reflection.AssemblyProductAttribute("KSAApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KSAApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

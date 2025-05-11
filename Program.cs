@@ -79,17 +79,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.Use(async (context, next) =>
-{
-    if (context.Request.Method == HttpMethods.Options)
-    {
-        context.Response.StatusCode = StatusCodes.Status200OK;
-        await context.Response.CompleteAsync();
-        return;
-    }
 
-    await next();
-});
 app.UseRouting();
 app.UseCors("AllowFrontend"); // 🔥 This must go early
 
