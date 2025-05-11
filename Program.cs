@@ -30,22 +30,6 @@ ServicePointManager.ServerCertificateValidationCallback +=
 // Add services to the container.
 builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
-// builder.Services
-//     .AddIdentityMongoDbProvider<ApplicationUser, ApplicationRole, Guid>(identityOptions =>
-//     {
-//         identityOptions.Password.RequireDigit = false;
-//         identityOptions.Password.RequiredLength = 6;
-//     },
-//     mongoIdentityOptions =>
-//     {
-//         mongoIdentityOptions.ConnectionString = "mongodb://localhost:27017";
-//         mongoIdentityOptions.DatabaseName = "MyAuthDB";
-//     });
-
-// builder.Services.AddIdentityServer()
-//     .AddAspNetIdentity<ApplicationUser>()
-//     .AddDeveloperSigningCredential();
-//     .AddDefaultTokenProviders();
 var jwtKey = builder.Configuration["Jwt:Key"];
 if (string.IsNullOrWhiteSpace(jwtKey))
 {
