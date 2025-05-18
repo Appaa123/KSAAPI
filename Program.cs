@@ -28,7 +28,6 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ServicePointManager.ServerCertificateValidationCallback +=
     (sender, cert, chain, sslPolicyErrors) => true;
 // Add services to the container.
-builder.Services.AddSingleton<IKSAService, KSAServcie>();
 builder.Services.AddControllers();
 var jwtKey = builder.Configuration["Jwt:Key"];
 if (string.IsNullOrWhiteSpace(jwtKey))
@@ -68,7 +67,14 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
     return new MongoClient(settings.ConnectionString);
 });
 
+builder.Services.AddSingleton<IKSAService, KSAService>();
+
+builder.Services.AddSingleton<IAuthService, AuthService>();
+
 builder.Services.AddSingleton<FarmStockRepository>();
+
+builder.Services.AddSingleton<AuthRepository>();
+
 
 
 var app = builder.Build();

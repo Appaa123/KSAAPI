@@ -4,10 +4,11 @@ using NuGet.Common;
 
 namespace KSAApi.Services;
 
-public class KSAServcie: IKSAService {
+public class KSAService: IKSAService {
 
 private FarmStockRepository _farmStockRepository;
-public KSAServcie(FarmStockRepository farmStockRepository){
+
+public KSAService(FarmStockRepository farmStockRepository){
 
     this._farmStockRepository = farmStockRepository;
 
