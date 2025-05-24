@@ -1,9 +1,7 @@
 using KSAApi;
 
-public interface IAuthService{
-    Task AddUserAsync(User newStock);
+public interface IAuthService
+{
+    public Task<bool> validateUser(User user);
 
-    Task DeleteUserAsync(string Id);
-    Task UpdateUserAsync(string Id, User User);
-    List<User> GetUserAsync();
 }

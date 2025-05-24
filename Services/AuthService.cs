@@ -4,29 +4,40 @@ using NuGet.Common;
 
 namespace KSAApi.Services;
 
-public class AuthService: IAuthService {
+public class AuthService : IAuthService
+{
 
-private AuthRepository _authRepository;
+    private UserRepository _userRepository;
+    private bool isValidated = false;
 
-public AuthService(AuthRepository authRepository){
+    public AuthService(UserRepository userRepository)
+    {
 
-    this._authRepository = authRepository;
+        _userRepository = userRepository;
 
-}
-public List<User> GetUserAsync(){
-    return _authRepository.GetAllAsync();
-}
+    }
+    public async Task<bool> validateUser(User user)
+    {
+         Console.WriteLine("validation started");
 
-public async Task AddUserAsync(User user){
-    await _authRepository.CreateAsync(user);
-} 
+        var valUser = await this._userRepository.GetByIdAsync(user.Id);
+        
+        Console.WriteLine("validation started" + valUser.username);
 
-public async Task UpdateUserAsync(string Id, User user){
-    await _authRepository.UpdateAsync(Id, user);
-} 
+        if (valUser.username == user.username && valUser.password == user.password)
+        {
+            Console.WriteLine("Succesfully validated!!" + valUser.username);
+            this.isValidated = true;
+        }
+        else
+        {
+            Console.WriteLine("validation failed" + valUser.username);
+            this.isValidated = false;
 
-public async Task DeleteUserAsync(string Id){
-    await _authRepository.DeleteAsync(Id);
-} 
+        }
 
+        
+        return this.isValidated;
+        
+    }
 }

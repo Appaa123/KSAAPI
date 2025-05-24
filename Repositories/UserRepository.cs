@@ -1,11 +1,11 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-public class AuthRepository
+public class UserRepository
 {
     private readonly IMongoCollection<User> _Auth;
 
-    public AuthRepository(IOptions<MongoDbSettings> settings, IMongoClient client)
+    public UserRepository(IOptions<MongoDbSettings> settings, IMongoClient client)
     {
         var database = client.GetDatabase(settings.Value.DatabaseName);
         _Auth = database.GetCollection<User>("User");
@@ -19,7 +19,7 @@ public class AuthRepository
     
         }
         catch (Exception ex){
-            Console.WriteLine("AuthRepository.GetAllAsync failed: " + ex.ToString());
+            Console.WriteLine("UserRepository.GetAllAsync failed: " + ex.ToString());
             throw; // Rethrow so it still returns 500
         }
     }

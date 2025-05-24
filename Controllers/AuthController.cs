@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 
 
 namespace KSAApi.Controllers
@@ -12,28 +13,28 @@ namespace KSAApi.Controllers
     public class AuthController : ControllerBase
     {
         private IConfiguration _configuration;
-        private IAuthService _authInterface;
+        private IAuthService _authService;
 
-        public AuthController(IConfiguration configuration, IAuthService authInterface)
+        public AuthController(IConfiguration configuration, IAuthService authService)
         {
-            this._configuration = configuration;
-            this._authInterface = authInterface;
+            _configuration = configuration;
+            _authService = authService;
         }
 
         [HttpPost("login")]
 
-        public  IActionResult Login([FromBody] User user)
+        public  async Task<IActionResult> Login([FromBody] User user)
         {
-            if(user.username == "admin" && user.password == "password"){
-
-                var token =  this.generateJWTToken(user.username);
-                return Ok(new {token});
+            var isUserValidated = await _authService.validateUser(user);
+            if (isUserValidated)
+            {
+                var token = this.generateJWTToken(user.username);
+                return Ok(new { token });
             }
 
             return Unauthorized();
 
         }
-
 
         [HttpPost("verify-token")]
             public IActionResult VerifyToken([FromBody] string token)
@@ -67,18 +68,6 @@ namespace KSAApi.Controllers
                     return Unauthorized(new { valid = false, error = ex.Message });
                 }
             }
-
-        [HttpPost("add-user")]
-
-        public async Task<User> AddUser([FromBody] User user) {
-           
-            if(user.username != null || user.password != null){
-               await this._authInterface.AddUserAsync(user);
-            }
-
-            return user;
-
-        }
 
         private string generateJWTToken(string username)
         {

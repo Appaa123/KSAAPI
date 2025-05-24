@@ -69,11 +69,13 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
 
 builder.Services.AddSingleton<IKSAService, KSAService>();
 
+builder.Services.AddSingleton<IUserService, UserService>();
+
 builder.Services.AddSingleton<IAuthService, AuthService>();
 
 builder.Services.AddSingleton<FarmStockRepository>();
 
-builder.Services.AddSingleton<AuthRepository>();
+builder.Services.AddSingleton<UserRepository>();
 
 
 
