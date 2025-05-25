@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Data.Common;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Common;
 
@@ -10,32 +12,45 @@ public class AuthService : IAuthService
     private UserRepository _userRepository;
     private bool isValidated = false;
 
+    private User _user;
+
     public AuthService(UserRepository userRepository)
     {
 
         _userRepository = userRepository;
 
     }
-    public async Task<bool> validateUser(User user)
+    public bool validateUser(User user)
     {
-         Console.WriteLine("validation started");
+        int count = 0;
+        if (user != null)
+        {
+            Console.WriteLine("validation started");
 
-        var valUser = await this._userRepository.GetByIdAsync(user.Id);
+            this._userRepository.GetAllAsync().ForEach(x =>
+            {
+                if (x.username == user.username && x.password == user.password)
+                {
+                    this._user = user;
+                    count++;
+                }
+            });
+
+            if (count == 1)
+            {
+                this.isValidated = true;
+            }
+            else if (count > 1)
+            {
+                new Exception("Duplicate records found!!");
+            }
+            else
+            {
+                this.isValidated = false;
+            }
+        }
         
-        Console.WriteLine("validation started" + valUser.username);
-
-        if (valUser.username == user.username && valUser.password == user.password)
-        {
-            Console.WriteLine("Succesfully validated!!" + valUser.username);
-            this.isValidated = true;
-        }
-        else
-        {
-            Console.WriteLine("validation failed" + valUser.username);
-            this.isValidated = false;
-
-        }
-
+        Console.WriteLine("validation started" + this._user.username);
         
         return this.isValidated;
         

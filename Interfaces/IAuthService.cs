@@ -2,6 +2,6 @@ using KSAApi;
 
 public interface IAuthService
 {
-    public Task<bool> validateUser(User user);
+    public bool validateUser(User user);
 
 }

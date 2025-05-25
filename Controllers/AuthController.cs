@@ -23,9 +23,13 @@ namespace KSAApi.Controllers
 
         [HttpPost("login")]
 
-        public  async Task<IActionResult> Login([FromBody] User user)
+        public IActionResult Login([FromBody] User user)
         {
-            var isUserValidated = await _authService.validateUser(user);
+            var isUserValidated = _authService.validateUser(user);
+
+            Console.WriteLine("uservalidated : "+isUserValidated);
+            Console.WriteLine("user : "+user);
+
             if (isUserValidated)
             {
                 var token = this.generateJWTToken(user.username);
